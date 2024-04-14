@@ -4,7 +4,7 @@ Given `terraform.conf`:
 
 ```properties
 bucket="{bucket}"
-kms_key_id="kms_key_id_arn"
+kms_key_id="{kms_key_id_arn}"
 dynamodb_table="{dynamodb_table}"
 ```
 
