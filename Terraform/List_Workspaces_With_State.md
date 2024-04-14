@@ -19,5 +19,5 @@ terraform init -backend-config=terraform.conf
 Then, run the following: 
 
 ```
-terraform workspace list | xargs -L 1 -I % sh -c 'terraform workspace select % && terraform workspace list | wc -l' sh
+terraform workspace list | sed 's/^* //' | xargs -L 1 -I % sh -c 'terraform workspace select % && terraform workspace list | wc -l' sh
 ```
